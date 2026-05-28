@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Hub | WhatsApp Order & GPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Hardware<span>Hub</span></div>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart-section">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Smart Hardware Store</h1>
+        <p>GPS Location ke saath order karein</p>
+    </section>
+
+    <section id="products" class="products">
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=400" alt="Power Drill" class="product-img">
+                <h3>Power Drill</h3>
+                <p>₹2500</p>
+                <button class="add-btn" onclick="addToCart('Power Drill', 2500)">Add</button>
+            </div>
+
+            <div class="product-card">
+                <img src="folder/Drill machine.jpg">
+                <h3>Steel Hammer</h3>
+                <p>₹450</p>
+                <button class="add-btn" onclick="addToCart('Steel Hammer', 450)">Add</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=400" alt="Wrench Set" class="product-img">
+                <h3>Wrench Set</h3>
+                <p>₹1200</p>
+                <button class="add-btn" onclick="addToCart('Wrench Set', 1200)">Add</button>
+            </div>
+
+            <div class="product-card">
+                <img src="folder/Spanners.png">
+                <h3>Spanners</h3>
+                <p>₹500</p>
+                <button class="add-btn" onclick="addToCart('Spanners', 500)">Add</button>
+            </div>
+
+            <div class="product-card">
+                <img src="folder/Screws.png">
+                <h3>Screws</h3>
+                <p>₹1000</p>
+                <button class="add-btn" onclick="addToCart('Screws', 1000)">Add</button>
+            </div>
+
+            <div class="product-card">
+                <img src="folder/Cutter.png">
+                <h3>Wire Stripper/Cutter</h3>
+                <p>₹750</p>
+                <button class="add-btn" onclick="addToCart('Wire Stripper/Cutter', 750)">Add</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cart-section" class="cart-section">
+        <div class="cart-container">
+            <h2 style="text-align: center; margin-bottom: 15px;">Checkout</h2>
+            <ul id="cart-items">
+                <p style="text-align:center; color:#888;">Cart khali hai</p>
+            </ul>
+            
+            <div class="form-group">
+                <input type="text" id="user-name" placeholder="Aapka Naam">
+                <button class="gps-btn" onclick="getLocation()">📍 Auto-Fetch My Location</button>
+                <textarea id="user-address" placeholder="Address ya Location Link yahan aayega..." readonly></textarea>
+                <p id="gps-status"></p>
+            </div>
+
+            <div class="total-box">
+                <span>Total:</span>
+                <span>₹<span id="cart-total">0</span></span>
+            </div>
+            <button class="whatsapp-btn" onclick="sendToWhatsApp()">Order on WhatsApp</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 HardwareHub - Quality Tools</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
